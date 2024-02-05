@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>new - webApp</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="C:\Users\amank\OneDrive\Documents\chromecustompage\style.css">
+    <script defer src="/main.js"></script>
+    <script defer src="C:\Users\amank\OneDrive\Documents\chromecustompage\main.js"></script>
+  </head>
+  <body>
+    <div class="leftPannel">
+      <p id="seconds">00</p>
+      <p id="minutes">00</p>
+      <p id="hours">00</p>
+    </div>
+
+    <div class="container">
+      <div class="searchBox">
+        <div class="warp">
+          <i class="fas fa-search"></i>
+          <input type="text" id="userinput" placeholder="Search" />
+
+          <div class="dropdown-container">
+            <select name="searchEngine" id="searchEngine">
+              <option value="google">Google</option>
+              <option value="bing">Bing</option>
+              <option value="yahoo">Yahoo</option>
+              <option value="youtube">Youtube</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="appBox">
+        <a href="https://youtube.com/" class="app" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
+          <p>YouTube</p>
+        </a>
+
+        <a href="" class="app">
+          <i class="fas fa-laptop-code"></i>
+          <p>vsc</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-whatsapp"></i>
+          <p>whatsapp</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-solid fa-envelope"></i>
+          <p>Gmail</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-github"></i>
+          <p>Git-Hub</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-solid fa-music"></i>
+          <p>Music</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-amazon"></i>
+          <p>Music</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-google"></i>
+          <p>Google</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-google"></i>
+          <p>Google</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-google"></i>
+          <p>Google</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-google"></i>
+          <p>Google</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-google"></i>
+          <p>Google</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-google"></i>
+          <p>Google</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-google"></i>
+          <p>Google</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-google"></i>
+          <p>Google</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-google"></i>
+          <p>Google</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-google"></i>
+          <p>Google</p>
+        </a>
+
+        <a href="." class="app">
+          <i class="fa-brands fa-google"></i>
+          <p>Google</p>
+        </a>
+      </div>
+
+      <div id="visualizer"></div>
+    </div>
+
+    <div class="rightPannel">
+      <div class="userAcountInfo">
+        <img
+          src="https://images.unsplash.com/photo-1616356257367-9cd4bf56a45e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+        <p id="username" class="" contenteditable="true" translate="no"></p>
+        <div class="verifybadge"></div>
+      </div>
+      <div class="musicwarp">
+        <div class="playlist"></div>
+        <div class="musicname">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore,
+          corrupti.
+        </div>
+        <div class="musicpannel">
+          <div class="slidecontrollers">
+            <div class="totalduration"></div>
+            <div class="availableduration"></div>
+            <input
+              type="range"
+              name="audioTrack"
+              id="audioTrack"
+              value="0"
+              min="0"
+              max="100"
+              maxlength="100"
+            />
+          </div>
+
+          <div class="btncontrollers">
+            <div id="minivisualizer"></div>
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-play" id="playpause"></i>
+            <i class="fas fa-chevron-right"></i>
+            <i class="fas fa-volume-up" id="volumeMute"></i>
+            <!-- <i class="fas fa-play" style="display: none;"></i> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

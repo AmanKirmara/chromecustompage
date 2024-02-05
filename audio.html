@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract Cover Image from MP3</title>
+</head>
+<body>
+    <input type="file" id="audioInput" accept=".mp3">
+    <img id="coverImage" alt="Cover Image">
+
+    <script src="https://unpkg.com/jsmediatags@3.9.2/dist/jsmediatags.min.js"></script>
+
+    <script>
+        document.getElementById('audioInput').addEventListener('change', handleFileSelect);
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+
+            if (file) {
+                readMP3Metadata(file);
+            }
+        }
+
+        function readMP3Metadata(file) {
+            jsmediatags.read(file, {
+                onSuccess: function (tag) {
+                    const { tags } = tag;
+
+                    if (tags.picture) {
+                        const imageData = tags.picture.data;
+                        const base64String = btoa(String.fromCharCode.apply(null, imageData));
+                        const imageUrl = `data:${tags.picture.format};base64,${base64String}`;
+
+                        // Display the cover image
+                        document.getElementById('coverImage').src = imageUrl;
+                    } else {
+                        console.log('No cover image found in the MP3 file.');
+                    }
+                },
+                onError: function (error) {
+                    console.log('Error reading MP3 metadata:', error.type, error.info);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
